@@ -2,7 +2,12 @@ version: '3'
 
 services:
   cf-update-record:
-    image: frgaudet/cf-update-record:0.0.3
+    image: frgaudet/cf-update-record:v0.0.3
+    environment:
+      CF_TOKEN: ${CF_TOKEN}
+      HOSTNAME: ${HOSTNAME}
+      ZONE_ID: ${ZONE_ID}
+      RECORD_ID: ${RECORD_ID}
     networks:
       private:
 
